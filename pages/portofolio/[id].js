@@ -1,7 +1,8 @@
 import React, { Component } from "react";
-import BaseLayout from "../components/layouts/BaseLayout";
+import BaseLayout from "../../components/layouts/BaseLayout";
 import { withRouter } from "next/router";
 import axios from "axios";
+import BasePage from "../../components/BasePage";
 
 class Portofolio extends Component {
   static async getInitialProps(context) {
@@ -20,7 +21,7 @@ class Portofolio extends Component {
   }
   render() {
     return (
-      <BaseLayout>
+      <BaseLayout {...this.props.auth}>
         <h1>{this.props.post.title}</h1>
         <h2>{this.props.post.body}</h2>
         <p>{this.props.post.id}</p>
