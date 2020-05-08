@@ -1,19 +1,14 @@
-import React, { Component } from "react";
-import BaseLayout from "./components/layouts/BaseLayout";
-import { withRouter } from "next/router";
-import axios from "axios";
+import React from "react";
 
-class Test extends Component {
-  static async getInitialProps(context) {
-    const testId = context.query.id;
-    return { testId };
+class Test extends React.Component {
+  static getInitialProps({ query }) {
+    const id = query.id;
+    return { id };
   }
+  state = {};
   render() {
-    return (
-      <BaseLayout>
-        <h1>I am Test Page with id of {this.props.testId}</h1>
-      </BaseLayout>
-    );
+    return <h1>Test page id is {this.props.id}</h1>;
   }
 }
-export default withRouter(Test);
+
+export default Test;

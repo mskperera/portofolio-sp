@@ -1,0 +1,15 @@
+// MIXINS
+@mixin background-cover() {
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+@mixin animation($animationType) {
+  -webkit-animation: animationType; /* Safari, Chrome and Opera >12.1 */
+  -moz-animation: animationType; /* Firefox <16 */
+  -ms-animation: animationType; /* Internet Explorer */
+  -o-animation: animationType; /* Opera <12.1*/
+  animation: animationType;
+}
