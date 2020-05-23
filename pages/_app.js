@@ -1,5 +1,6 @@
 import React from "react";
 import App, { Container } from "next/app";
+import Fonts from "../helpers/Fonts";
 
 import auth0 from "../services/auth0";
 
@@ -21,7 +22,7 @@ class MyApp extends App {
       pageProps = await Component.getInitialProps(ctx);
     }
 
-    console.log("process.env.NODE_ENV kkkkkkkkkkkkkkkk", process.env.NODE_ENV);
+    console.log("process.env.NODE_ENV Running on", process.env.NODE_ENV);
     //////////////////
     // let isAuthenticated=false;    //   isAuthenticated:!!user   short form
     // if(user){
@@ -35,6 +36,10 @@ class MyApp extends App {
     const auth = { user, isAuthenticated: !!user, isSiteOwner };
 
     return { pageProps, auth };
+  }
+
+  componentDidMount() {
+    Fonts();
   }
 
   render() {

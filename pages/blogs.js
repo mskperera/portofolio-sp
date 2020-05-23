@@ -134,6 +134,11 @@ class Blog extends Component {
             </Container>
           </footer>
         </BasePage>
+        <style jsx>
+          {`
+            @import url("https://pro.fontawesome.com/releases/v5.10.0/css/all.css");
+          `}
+        </style>
       </BaseLayout>
     );
   }
