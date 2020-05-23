@@ -54,6 +54,7 @@ const layout = (props) => {
             href={`${process.env.BASE_URL}${cannonical}`}
           /> // <link rel="cannonical" href={`http://localhost:3000${cannonical}`} />
         )}
+        <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:wght@400;700&display=swap" rel="stylesheet"/>
         <link rel="icon" type="image/ico" href="/static/favicon.ico" />
       </Head>
       <div className="layout-container">
