@@ -16,7 +16,7 @@ const mongoose = require("mongoose");
 const config = require("./config");
 
 const bodyPharser = require("body-parser");
-
+const compression = require("compression");
 const bookRoutes = require("./routes/book");
 const portfolioRoutes = require("./routes/portfolio");
 
@@ -41,7 +41,7 @@ app
   .prepare()
   .then(() => {
     const server = express();
-
+    server.use(compression()); // used to reduce javascript file size
     server.use(bodyPharser.json());
 
     server.use("/api/v1/books", bookRoutes);
